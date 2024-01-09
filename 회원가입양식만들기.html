@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>회원가입 페이지 만들기</title>
+</head>
+<body>
+
+    <form action="nothing.com" method="post">
+        <h1>회원가입</h1>
+
+        <fieldset>
+            <p>사용하실 ID및 비밀번호를 입력하여 주십시오.</p>
+            <legend>ID및 비밀번호</legend>
+            <label for="username">사용자 ID :</label>
+            <input type="text" id="username" name="username" placeholder="영문자 및 숫자 조합.">
+            <br><br>
+
+            <label for="password">비밀 번호 :</label>
+            <input type="password" id="password" name="password" placeholder="영문자, 특수문자, 숫자 조합">
+        </fieldset>
+
+        <hr>
+
+        <fieldset>
+            <legend>개인정보</legend>
+            <p>생년월일과 E-mail을 입력하여 주십시오.</p>
+            <label for="name">성명 :</label>
+            <input type="text" name="name" id="name" placeholder="성명을 입력하세요.">
+            <br><br>
+
+            <label for="birthdate">생년월일 :</label>
+            <input type="text" id="birthdate" maxlength="6" 
+            name="birthdate" size="10" placeholder="예: 060326">
+
+            <label for="sextype">성별 :</label>
+            <input type="text" id="sextype" maxlength="1" 
+            name="sextype" size="1">****** (예: 남성 1, 여성 2)
+            <br><br>
+            
+            <label for="email">이메일 : </label>
+            <input type="email" name="email" id="email" placeholder="이메일을 입력하세요.">
+            (예 : oz.ozcodingschool.com)
+        </fieldset><hr>
+
+        <fieldset>
+            <p>본인 명의로 된 휴대폰 번호를 입력해주세요.</p>
+            <legend>개인 인증</legend>
+            <label for="phone">휴대 전화 번호 :</label>
+            &nbsp;<input type="text" id="phone" name="phone" 
+            maxlength="3" size="3" placeholder="010">
+            - <label for="phone1"></label>
+            <input type="text" id="phone1" name="phone1" 
+            maxlength="4" size="4" placeholder="1234">
+            - <label for="phone2"></label>
+            <input type="text" id="phone2" name="phone2"
+            maxlength="4" size="4" placeholder="5678">
+
+            &nbsp;&nbsp;&nbsp;
+            <select multiple size="1">
+                <option value="choice">통신사를 선택하세요</option>
+                <option value="SKT">SKT</option>
+                <option value="KT">KT</option>
+                <option value="LG+">LG+</option>
+                <option value="MNVO">알뜰폰</option>
+            </select>
+
+            &nbsp;&nbsp;
+            <button type="certify">인증하기</button>
+        </fieldset>
+        <hr><br>    
+
+        <center><button type="submit">가입하기</button></center>
+    </form>
+</body>
+</html>
