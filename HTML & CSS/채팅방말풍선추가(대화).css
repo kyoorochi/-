@@ -1,0 +1,67 @@
+ul{
+    overflow: auto;
+    height: calc(100% - 120px);
+}
+
+.chat_screen_texts{
+    padding: 0;
+    list-style-type: none;
+}
+
+.chat_screen_texts > .prodo{
+    background-color: rgb(166, 164, 164);
+    width: fit-content;
+    height: fit-content;
+    margin: 0 0 10px;
+    padding: 10px;
+    border-radius: 8px;
+    line-height: 30px;
+    position: relative;
+    left: 20px;
+}
+.chat_screen_texts > .me{
+    background-color: #fef01b;
+    width: fit-content;
+    height: fit-content;
+    margin: 0 20px 20px 0;
+    margin-left: auto;
+    padding: 10px;
+    border-radius: 8px;
+    line-height: 30px;
+    position: relative;    
+}
+
+.chat_screen_texts > .prodo::after{
+    content: "";
+    border-right: 16px solid rgb(166, 164, 164);
+    border-bottom: 16px solid transparent;
+    position: absolute;
+    top: 10px;
+    left: -10px;
+}
+.chat_screen_texts > .me::after{
+    content: "";
+    border-left: 16px solid #fef01b;
+    border-top: 16px solid transparent;
+    position: absolute;
+    bottom: 10px;
+    right: -10px;
+}
+
+.chat_screen_texts > .prodo:hover{
+    background-color: #1c9352;
+    transition: background-color 1500ms 200ms ease-in;
+}
+.chat_screen_texts > .me:hover{
+    background-color: yellowgreen;
+    transition: background-color 1500ms 200ms ease-in;
+}
+
+.chat_screen_texts > .prodo:hover::after{
+    border-right: 16px solid #1c9352;
+    transition: border-color 1500ms 200ms ease-in;
+}
+.chat_screen_texts > .me:hover::after{
+    border-left: 16px solid yellowgreen;
+    transition: border-color 1500ms 200ms ease-in;
+}
