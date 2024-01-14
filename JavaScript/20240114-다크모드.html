@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>다크모드 전환</title>
+        
+        <style>
+            .darkmode{
+                background-color: black;
+                color: white;
+            }            
+        </style>
+    </head>
+    <body>
+        <h1>다크모드, 라이트모드 전환 과제</h1>
+        <button onclick="darkmode()" id="button1">다크모드</button>      
+
+        <script>
+            function darkmode() {
+                var body = document.body;
+                body.classList.toggle("darkmode");
+                var button = document.getElementById('button1');
+                if(button.innerHTML == '다크모드') {
+                    button.innerHTML = '라이트모드';
+                } else {
+                    button.innerHTML = '다크모드';
+                }
+            }            
+        </script>
+    </body>
+</html>
