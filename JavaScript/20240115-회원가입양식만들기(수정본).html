@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>회원가입 폼</title>
+    <style>
+        body {
+            background-color: skyblue;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 75vh;
+            background-image: url("https://cphoto.asiae.co.kr/listimglink/1/2013040511054400280_2.jpg");
+        }
+
+        #signupContainer {
+            background-color: violet;
+            padding: 20px;
+            border-radius: 25px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+            text-align: center;
+            
+        }
+
+        form {
+            max-width: 400px;
+            margin: 20px auto;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            color: black;
+        }
+
+        input {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 16px;
+            box-sizing: border-box;
+        }
+
+        button {
+            padding: 10px;
+            background-color: #fff;
+            color: black;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #ddd;
+        }
+
+        input[type="password"] {
+            margin-bottom: 16px;
+        }
+
+        input[type="password"]:last-child {
+            margin-bottom: 32px;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="signupContainer">
+        <h2 style="color: black;">회원가입</h2>
+        <form id="signupForm">
+            <label for="name">성명:</label>
+            <input type="text" id="name" name="name" placeholder="김오즈" required>
+
+            <label for="birthdate">생년월일:</label>
+            <input type="text" id="birthdate" name="birthdate" placeholder="20020604" required>
+
+            <label for="email">이메일:</label>
+            <input type="email" id="email" name="email" placeholder="oz@ozcodingschool.com" required>
+
+            <label for="password">비밀번호:</label>
+            <input type="password" id="password" name="password" placeholder="영문자 및 숫자 조합" required>
+
+            <label for="checkingPassword">비밀번호 확인:</label>
+            <input type="password" id="checkingPassword" name="checkingPassword" placeholder="앞서 입력하신 것과 동일하게" required>
+
+            <button type="button" onclick="submitForm()">가입하기</button>
+        </form>
+    </div>
+
+    <script>
+        function submitForm() {
+            const username = document.getElementById("name").value;
+            const birthdate = document.getElementById("birthdate").value;
+            const email = document.getElementById("email").value;
+            const password = document.getElementById("password").value;
+            const checkingPassword = document.getElementById("checkingPassword").value;
+
+            if (password !== checkingPassword) {
+                alert("입력하신 비밀번호가 일치하지 않습니다.");
+                return;
+            }
+
+            const userData = {
+                username: username,
+                birthdate: birthdate,
+                email: email,
+                password: password
+            };
+
+            console.log("가입 정보:", userData);
+        }
+    </script>
+
+</body>
+</html>
