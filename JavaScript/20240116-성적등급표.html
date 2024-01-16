@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>챌린지과제(등급표)</title>
+</head> 
+<body>
+    <!-- 우선 표부터 꾸며보자 -->
+    <table align="center" border="9" width="540" height="360">
+        <tr bgcolor="skyblue" align="center">
+            <td colspan="6" style="font-size: 32px;">점수에 따른 등급표</td>
+        </tr>
+        <tr>
+            <td align="center" bgcolor="orange">점수</td>
+            <td align="center" bgcolor="gold">90점 이상</td>
+            <td align="center" bgcolor="silver">80 ~ 89점</td>
+            <td align="center" bgcolor="bronze"><font color='white'>70 ~ 79점</font></td>
+            <td align="center" bgcolor="pink">60 ~ 69점</td>
+            <td align="center" bgcolor="red">60점 미만</td>
+        </tr>
+        <tr>
+            <td align="center" bgcolor="orange">등급</td>
+            <td align="center" bgcolor="gold">A</td>
+            <td align="center" bgcolor="silver">B</td>
+            <td align="center" bgcolor="bronze"><font color='white'>C</font></td>
+            <td align="center" bgcolor="pink">D</td>
+            <td align="center" bgcolor="red">F</td>
+        </tr>
+    </table><hr>
+    <p id="result" style="font-size: 32px;"></p>
+
+    <script>
+        // 정수로 입력받게 창 하나 띄우게 해주자
+        const score = parseInt(prompt('점수를 입력해주세요. (0 ~ 100 사이 정수로)'));
+
+        // 저 위에 있는 p태그에 문장이 들어가게끔 ID를 지정해주자
+        const result = document.getElementById('result');
+
+        // if문 반복구조로 입력받은 숫자를 대조시키고 거기에 따른 문구를 만들어보자.
+        let grade = 'G'
+        if (score >= 90){
+            grade = `A등급입니다. 아주 훌륭하군요!`
+        }else if (score >= 80){
+            grade = `B등급입니다. 좋은데요?`
+        }else if (score >= 70){
+            grade = `C등급입니다. 준수해요.`
+        }else if (score >= 60){
+            grade = `D등급입니다. 양호하지만 분발해주세요.`
+        }else {
+            grade = `F등급입니다. 뭐하셨어요?`
+        }
+        // 계산된 결과값을 p태그에 문장으로 들어가게 명령어를 만들자.
+        result.innerText = `당신의 점수는 ${score}점으로, 등급은 ${grade}`
+    </script>
+    
+</body>
+</html>

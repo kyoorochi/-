@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>별트리 만들기</title>
+</head>
+<body>
+    
+    <script>
+        document.write('1번별트리 만들기') // 이건 멘트 부분
+        
+        document.write('<br>') // 줄바꿈 하라고 명령 한번 주고
+         
+        // 오른쪽으로 늘어나는 직각삼각형 형식
+        for (let x = 0; x < 5; x++){
+            for(let y = 0; y <= x; y++){
+                document.write('*')
+            }
+            document.write('<br>');
+        }
+        document.write('<br>') // 한줄 띄우기
+
+        document.write('2번별트리 만들기') // 다시 멘트. 이번꺼는 늘었다가 줄었다가.
+
+        document.write('<br>') // 한줄 띄우기
+
+        for (let x = 0; x < 5; x++) {
+            for (let y = 0; y <= x; y++){
+                document.write('$')
+            }
+            document.write('<br>');
+        } // 여기까진 1번하고 같은데...
+        for (let x = 0; x < 5; x++) {
+            // 윗줄은 1번하고 같은데...
+            for (let y = 4; y > x; y--){
+                // 여기서 바뀌는군. 5에서 시작해서 1이 될때까지의 과정인거 같고, 그 동안 하나씩 뺀다. 뭐 그런거?
+                document.write('$')
+            }
+            document.write('<br>');
+        }
+
+        document.write('<br>');
+
+        document.write('<br>') // 한줄 띄우기
+
+        document.write('3번별트리 만들기') // 이번엔 다이아몬드
+        document.write('<br>') // 한줄 띄우기
+
+        for(let x = 0; x < 5; x++){
+            for(let y = 4; y > x; y--){
+                document.write('&nbsp');
+            }
+            for(let y = 0; y <= 1; y++){
+                document.write('#');
+            }
+            for(let y = 1; y <= x; y++){
+                document.write('#');
+            }
+            document.write('<br>')
+        }
+        for(let x = 0; x < 4; x++){
+            for(let y = 0; y <= x; y++){
+                document.write('&nbsp');
+            }
+            for(let y = 4; y > x; y--){
+                document.write('#');
+            }
+            for(let y = 1; y > x; y--){
+                document.write('#');
+            }
+            document.write('<br>');
+        }
+    </script>
+</body>
+</html>
