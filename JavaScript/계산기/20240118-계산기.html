@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>계산기</title>
+    <!-- https://sayyoung.tistory.com/37 참조 -->
+    <link href="20240118-계산기.css" rel="stylesheet">
+</head>
+<body>
+    <main>
+        <input type="text" disabled>
+        <!-- 'text' 타입의 요소는 사용자가 클릭할 수 없고 사용할 수 없게 disabled로 설정 -->
+        <div class="button-wrap">
+            <button data-type="ac"class="ac">AC</button> 
+            <!-- AC는 싹 지우는 버튼. ac라는 클래스를 주자.
+                그래야 나중에 사이즈 조정도하고 다른 부분도 들어가니까
+                data-type을 누르면 값이 입력되도록 하는 작업을 위해서 -->
+            <button data-type="operator">&divide;</button>
+            <!-- &divide; 는 나눗셈표시를 위한 html 토큰이라 함
+                연산자 부분은 operator로 묶어놓자 -->
+            <button>7</button>
+            <button>8</button>
+            <button>9</button>
+            <button data-type="operator">&times;</button>
+            <!-- &times;는 곱셈표시 토큰이라 함. 2 times라고 하면 2회.. 그런 개념인듯? -->
+            <button>4</button>
+            <button>5</button>
+            <button>6</button>
+            <button data-type="operator">-</button>
+            <button>1</button>
+            <button>2</button>
+            <button>3</button>
+            <button data-type="operator">+</button>
+            <button class="zero">0</button>
+            <!-- 0 버튼에도 클래스를 줘서 나중에 사이즈 조정하게끔 해놓자 -->
+            <button>.</button>
+            <!-- equals 로 놓아야 연산을 끝내고 값을 반환시키는 거니까 따로 뺀다. -->
+            <button data-type="equals" class="equals">=</button>
+            <!-- 버튼들은 다 만들었고 라이브띄우니 버튼은 다 들어갔고.. 꾸며보자. -->
+        </div>
+    </main>
+    <script src="20240118-계산기.js"></script>
+</body>
+</html>
