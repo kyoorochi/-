@@ -1,0 +1,80 @@
+<!-- 이룸코딩 유튜브 참조 -->
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>가위바위보 게임</title>
+</head>
+<body>
+    <div class="container"> <!-- 1. 가위바위보 진행 부분에서 컴퓨터의 선택과 사용자의 선택을 표시하기 위해 두 줄 만든다. -->
+        <div class="block">
+            <h2>컴퓨터의 선택 :</h2>
+            <p class="com-choice"></p><br>
+        </div>
+        <div class="block">
+            <h2>당신의 선택 :</h2>
+            <p class="your-choice"></p>
+        </div>
+    </div>
+
+    <div class="buttons"> <!-- 2. 가위바위보 각 버튼을 만들자. -->
+        <button>가위</button>
+        <button>바위</button>
+        <button>보</button>
+    </div><br><br>
+    <div class="result">가위바위보!</div> <!-- 3. 여긴 결과창. 우선 '가위바위보!'를 넣어서 사용자가 버튼을 누르면 결과가 나오게 하자.-->
+
+    <script>
+        const buttons = document.querySelectorAll('button'); /* 4. 문서에 있는 모든 버튼들을 가져오자 */
+        const computerChoice = document.querySelector('.com-choice')
+        const userChoice = document.querySelector('.your-choice')
+        const winner = document.querySelector('.result')
+
+        const result = ['가위', '바위', '보'] /* 8. 컴퓨터가 선택할 부분을 만들어 주자. */
+
+        const show = (user, computer, result) => { /* 19. game을 실행해서 나온 값을 출력시게 함수를 만들어서 */
+            computerChoice.innerText = computer;
+            userChoice.innerText = user;
+            winner.innerText = result; /* 20. 이 3개가 나오게 하는 것으로 종료한다. */
+        }
+
+        const game = (user, computer) => { /* 11. 사용자와 컴퓨터와의 승부를 판별하기 위해 함수를 만들자 */
+            let message;
+
+            if (user === computer){ /* 12. user가 선택한 텍스트와 computer가 선택한 텍스트가 같으면 */
+                message = 'Draw Game'; /* 13. 이게 출력되게 하고 */
+            } else { /* 14. 같지 않을 경우 */
+                switch (user + computer) { /* 15. 텍스트를 합쳐서 경우의 수를 만들어서 */
+                    case '가위보':
+                    case '바위가위':
+                    case '보바위':
+                        message = 'You Win!' /* 16. 위 3가지 중에 하나가 나오면 승리 표시를 하게 하고 */
+                        break;
+                    case '보가위':
+                    case '가위바위':
+                    case '바위보':
+                        message = 'You Lose...' /* 17. 다른 3가지 중에 하나가 나오면 패배 표시를 하게 한다. */
+                        break;
+                }
+            }
+
+            show(user, computer, message) /* 18. 그걸 출력하게 하고 */
+        }
+
+        const play = (event) => { /* 6. 5번에 있는 forEach 에 대한 핸들러를 만들어 주자 */
+            const user = event.target.innerText; /* 7. user 부분에 대한건 이렇게 만들고 */
+            const randomIndex = Math.floor(Math.random() * 3); /* 9. 0 ~ 1 사이의 무작위의 수를 0, 1, 2만 나오게끔 3을 곱한 뒤 floor를 써서 소숫점 이하를 버린다 */
+            const computer = result[randomIndex]; /* 10. 그 부분을 이렇게 집어 넣는다. */
+            game(user, computer);
+        }
+        
+        buttons.forEach((button) => { /* 5. 배열에 사용할 수 있는 forEach를 사용하여 이벤트리스너를 등록한다. */
+            button.addEventListener('click', play);
+        });
+
+
+    </script>
+</body>
+</html>
