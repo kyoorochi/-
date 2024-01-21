@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0">
+        <title>이미지 멈춰!</title>
+        <style>
+            *{
+                box-sizing: border-box;
+            }
+
+            .screen{
+                width: 1024px;
+                height: 768px;
+                overflow: hidden;
+            }
+
+            .screen > img{
+                width: 1024px;
+                height: 768px;
+            }
+
+        </style>
+
+    </head>
+    <body>
+        <div id = "screen">
+            <img src = "HOT_1024.BMP" id = "main" >
+        </div>
+        <button id = "stop">정지</button>
+
+        <script>
+        
+            const mainImg = document.getElementById("main")
+            const btn = document.getElementById("stop")
+
+            const imgArr = ["HOT_1024.BMP", "HEEJUN_1024.BMP", "WOOHYUK_1024.BMP", "TONY_1024.BMP", "KANGTA_1024.BMP", "JAE_1024.BMP"]
+            let idx = 0
+
+            function changeImg(){
+                if (idx >= imgArr.length){
+                    idx = 0
+                }
+                mainImg.src = imgArr[idx]
+                idx += 1
+            }
+
+
+
+            timeID = setInterval(changeImg, 1000)
+
+            btn.addEventListener("click", function(){
+                clearInterval(timeID)
+            })
+        </script>
+    </body>
+    </html>
