@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS복습과제 - 떡잎유치원 멀리뛰기 결과</title>
+    <style>
+        /* 3. 표를 만들며 집어넣은 스타일 태그들을 여기로 정리해 모아놓자. */
+        table {
+            width: 320px;
+            height: 180px;
+        }
+        table, tr, td {
+            text-align: center;
+            border: 1px double black;
+        }
+        th {
+            border: 1px double black;
+            font-weight: 900;
+        }
+        #result {
+            margin-top: 20px;
+            font-size: 24px;
+            font-weight: 900;
+        }
+    </style>
+</head>
+<body>
+    <!-- 1. 우선 표를 만들자. -->
+    <h1>떡잎 유치원 멀리뛰기 결과</h1>
+    <table id="scoreTable">
+        <tr>
+            <th>이름</th>
+            <th>점수</th>
+        </tr>
+        <tr>
+            <td>짱구</td>
+            <td>45</td>
+        </tr>
+        <tr>
+            <td>맹구</td>
+            <td>75</td>
+        </tr>
+        <tr>
+            <td>철수</td>
+            <td>95</td>
+        </tr>
+        <tr>
+            <td>훈이</td>
+            <td>50</td>
+        </tr>
+        <tr>
+            <td>유리</td>
+            <td>68</td>
+        </tr>
+        <tr>
+            <td>수지</td>
+            <td>86</td>
+        </tr>
+    </table>
+    <div id="result"></div> <!-- 2. 이 부분은 마지막에 결과가 출력되도록 하는 부분 -->
+    <script>
+        // 5. 표를 정렬하지 않고 75점이 넘는 학생을 내림차순으로 나열하는 함수
+        function filterAndSortTable(){
+            let table = document.getElementById('scoreTable');
+            let scores = table.rows;
+
+            // 6. 배열로 변환하고 75점 이상인 사람만 필터링
+            let filteredScores = Array.from(scores).slice(1).filter(function(row){
+                let score = parseInt(row.cells[1].textContent);
+                return score >= 75;
+            });
+
+            // 7. 점수를 내림차순으로 정렬
+            filteredScores.sort(function(a, b){
+                let scoreA = parseInt(a.cells[1].textContent);
+                let scoreB = parseInt(b.cells[1].textContent);
+                return scoreB - scoreA;
+            });
+
+            // 8. 결과값이 출력되도록 만들자.
+            let result = document.getElementById('result');
+            result.innerHTML = '75점이 넘는 사람 : ';
+
+            for(i = 0; i < filteredScores.length; i++){
+                let name = filteredScores[i].cells[0].textContent;
+                let score = parseInt(filteredScores[i].cells[1].textContent);
+                result.innerHTML += name + "(" + score + "점) ";
+                if (i < filteredScores.length - 1){
+                    result.innerHTML += ', ';
+                }
+            }
+        }
+
+        // 9. 함수 호출 부분 추가
+        onload = function(){
+            filterAndSortTable();
+        };
+    </script>
+</body>
+</html>
