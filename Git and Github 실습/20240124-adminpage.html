@@ -37,11 +37,11 @@
         <table class="table table-sm">
             <thead>
                 <!-- 열의 속성값을 나타내는 코드를 작성해주세요 (예 : 카테고리, 브랜드, 상품명, 가격) -->
-                <tr class="table-dark">
-                    <th scope="col">카테고리</th>
-                    <th scope="col">브랜드</th>
-                    <th scope="col">상품명</th>
-                    <th scope="col">가격</th>
+                <tr class="table-dark text-center"> <!-- 문구는 가운데 정렬, 가격부분은 우측정렬 하고 싶어 건들어봄 -->
+                    <th scope="col" class="test-center">카테고리</th>
+                    <th scope="col" class="test-center">브랜드</th>
+                    <th scope="col" class="test-center">상품명</th>
+                    <th scope="col" class="test-end">가격 (원)</th>
                 </tr>                
             </thead>
             <tbody id="data-table">
@@ -81,11 +81,11 @@
       const dataTable = document.getElementById('data-table');
       
       data.forEach((item) => {
-          const row = dataTable.insertRow();
-          row.insertCell(0).innerHTML = item.category;
-          row.insertCell(1).innerHTML = item.brand;
-          row.insertCell(2).innerHTML = item.product;
-          row.insertCell(3).innerHTML = item.price;
+          const row = dataTable.insertRow(); // body 부분에 표를 건든것처럼 문구부분은 가운데 정렬, 금액만 우측정렬 해보려고 건드려봄.
+          row.insertCell(0).innerHTML = `<div class="text-center">${item.category}</div>`;
+          row.insertCell(1).innerHTML = `<div class="text-center">${item.brand}</div>`;
+          row.insertCell(2).innerHTML = `<div class="text-center">${item.product}</div>`;
+          row.insertCell(3).innerHTML = `<div class="text-end">${item.price}</div>`;
       });
 
     </script>
