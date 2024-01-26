@@ -1,0 +1,9 @@
+/* 시계부분 위치 지정 */
+.container-heading {
+    display: flex;
+    align-items: center;
+}
+
+#clock {
+    margin-left: 4px;
+}
