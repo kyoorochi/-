@@ -1,0 +1,3 @@
+-- use yes24;
+-- select publisher, max(rating) - min(rating) as rating_difference from Books group by publisher order by rating_difference desc limit 1;
+-- select title, rating / sales as ratio from Books where author = '최태성 저' order by ratio desc limit 1;
