@@ -7,7 +7,7 @@
 - 컴퓨터의 발전으로 인해 남는 자원이 많이 생김.
 - 인터넷의 발전으로 데이터 공유 속도가 빨라짐.
 - 가상화(Virtualization) 기술로 만든 Virtual Machine을 인터넷을 통해 빌려주게 됨.
-![클라우드 컴퓨팅 탄생이(alt)](https://cdn.frontoverflow.com/document/first-met-aws/images/chapter_01/born_of_cloud_computing.jpeg "")  
+![클라우드 컴퓨팅 탄생이유(alt)](https://cdn.frontoverflow.com/document/first-met-aws/images/chapter_01/born_of_cloud_computing.jpeg "")
   
 # 3. 어디까지 빌려줘야 할까?
   ## ○ 피자를 먹는 네 가지 방법으로 대입하면 이해하기 쉽다.
@@ -15,6 +15,7 @@
     - 냉동 피자: Infrastructure만 대여 (Infrastructure as a Service, IaaS)
      -배달 피자: Platform까지 대여 (Platform as a Service, PaaS)
     - 음식점 피자: Software 통째로 대여 (Sofrware as a Service, SaaS)
+    ![피자 먹는 방법을 그림으로 설명(alt)](https://cdn.frontoverflow.com/document/first-met-aws/images/chapter_01/pizza_as_a_service_cloud.jpeg "")
   ## ○ AWS는 Infrastructure, Platform, Software를 모두 포함
     
 # 4. 클라우드 컴퓨팅을 써야하는 이유
