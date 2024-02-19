@@ -1,12 +1,13 @@
 # 1. 클라우드
 - 클라우드 컴퓨팅(Cloud Computing)의 줄임말
 - 전산 자원들을 공유하는 기술과 도구의 집합
-  ![클라우드 컴퓨팅 설명그림(alt)](https://cdn.frontoverflow.com/document/first-met-aws/images/chapter_01/wikipedia_cloud_computing.jpeg "")
+![클라우드 컴퓨팅 설명그림(alt)](https://cdn.frontoverflow.com/document/first-met-aws/images/chapter_01/wikipedia_cloud_computing.jpeg "")
 
 # 2. 클라우드 컴퓨팅의 탄생
 - 컴퓨터의 발전으로 인해 남는 자원이 많이 생김.
 - 인터넷의 발전으로 데이터 공유 속도가 빨라짐.
 - 가상화(Virtualization) 기술로 만든 Virtual Machine을 인터넷을 통해 빌려주게 됨.
+![클라우드 컴퓨팅 탄생이(alt)](https://cdn.frontoverflow.com/document/first-met-aws/images/chapter_01/born_of_cloud_computing.jpeg "")  
   
 # 3. 어디까지 빌려줘야 할까?
   ## ○ 피자를 먹는 네 가지 방법으로 대입하면 이해하기 쉽다.
