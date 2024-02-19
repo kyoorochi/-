@@ -26,7 +26,6 @@
   - 많은 노력 ➔ 적은 노력
     
 # 5. 클라우드 컴퓨팅의 장점
-![클라우드 컴퓨팅의 장점(alt)](https://cdn.frontoverflow.com/document/first-met-aws/images/chapter_01/cloud_benefit_6.jpeg "")
   - 초기 투자 비용이 없고, 운영 비용이 적으며, 탄력적인 운영 및 확장이 가능함.
   - 인프라를 빠르게 구축할 수 있으므로, 자체 비즈니스에만 집중 가능함.
   - 글로벌 확장도 손쉽게 할 수 있음.
