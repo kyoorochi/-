@@ -15,7 +15,7 @@
     - 냉동 피자: Infrastructure만 대여 (Infrastructure as a Service, IaaS)
      -배달 피자: Platform까지 대여 (Platform as a Service, PaaS)
     - 음식점 피자: Software 통째로 대여 (Sofrware as a Service, SaaS)
-    ![피자 먹는 방법을 그림으로 설명(alt)](https://cdn.frontoverflow.com/document/first-met-aws/images/chapter_01/pizza_as_a_service_cloud.jpeg "")
+![피자 먹는 방법을 그림으로 설명(alt)](https://cdn.frontoverflow.com/document/first-met-aws/images/chapter_01/pizza_as_a_service_cloud.jpeg "")
   ## ○ AWS는 Infrastructure, Platform, Software를 모두 포함
     
 # 4. 클라우드 컴퓨팅을 써야하는 이유
