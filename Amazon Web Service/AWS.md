@@ -18,7 +18,7 @@
   - AWS 서비스의 3대장: EC2, S3, RDS
 
 # 4. AWS 사용 사례
-![AWS에를 사용하는 라인게임즈(alt)](https://cdn.frontoverflow.com/document/first-met-aws/images/chapter_02/use_case_linegames.jpeg "")
+![AWS를 사용하는 라인게임즈(alt)](https://cdn.frontoverflow.com/document/first-met-aws/images/chapter_02/use_case_linegames.jpeg "AWS를 사용하는 라인게임즈")
   - Data Warehousing
   - Mobile App Backend
   - AI, Chatbot
