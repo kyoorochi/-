@@ -10,7 +10,7 @@
 # 4. AMI도 생성
 ![](../AWS/screenshot/37.jpg)
 
-# 5. AMI도 생성
+# 5. 템플릿도 생성
 ![](../AWS/screenshot/38.jpg)
 
 # 6. ASG 생성완료
