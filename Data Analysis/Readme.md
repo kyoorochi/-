@@ -9,4 +9,5 @@
     to perform the operation inplace on the original object.
 
 Pandas 관련해서 3.0 이상 버전에서부터는 inplace 부분하고 몇가지 옵션이 변경된다는 안내로 파악된다
+
 그러면.. 문법이라고 해야되나? 그게 바뀌어서 뜯어 고쳐야되는건가..?
